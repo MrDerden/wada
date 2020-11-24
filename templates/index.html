@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>my image gallery</title>
+</head>
+<body>
+<center>
+    <h1>My image gallery</h1>
+    {% for results in Imggal %}
+    <div style="border:1px solid black; margin: 10px">
+        <h3>{{ results.img_title }}</h3>
+        <p>{{ results.img_description }}</p>
+        <img src="{{ results.image.url }}" width="20%" />
+    </div>
+    {% endfor %}
+</center>
+</body>
+</html>
